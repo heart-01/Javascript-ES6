@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging JavaScipt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<style>
+    body {
+        background-color: bisque;
+    }
+</style>
+
+<body>
+    
+    <div class="container mt-5">
+        <form onsubmit="submitName(event)" >
+            <h1>Reverse my name app</h1>
+            <div class="form-group mb-2">
+                <input type="text" name="fullname" id="fullname" 
+                class="form-control" placeholder="Enter your name">
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+
+        <p id="reversed_name"></p>
+    </div>
+</body>
+
+<script>
+    const submitName = (event) => {
+        event.preventDefault()
+
+        const inputName = document.getElementById('fullname')
+        console.log(inputName);
+        //debugger //debugger เป็นคำสั่งให้โปรแกรมหยุดรอ
+        console.log(inputName.value)
+        console.warn(inputName.value)
+        console.error(inputName.value)
+        //debugger
+        const character_array = inputName.value.split('')
+        const reversed_characters_array = character_array.reverse()
+        const reversed_fullname = reversed_characters_array.join('')
+        console.log(reversed_fullname)
+
+        document.getElementById('reversed_name').innerHTML = reversed_fullname
+    } 
+</script>
+
+</html>
