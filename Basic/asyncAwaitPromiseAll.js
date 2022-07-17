@@ -29,3 +29,20 @@ const loadData = async () => { //function loadData ทำงานแบบ asyn
 
 const data = loadData().then( data => console.log(data)); //เรียกใช้ function loadData และ console.log ข้อมูล data ที่ได้มาจาก function loadData
 console.log(data); //แสดงให้เห็นว่ามีการเรียกใช้ Promise มาประยุกต์ใช้กับ async await
+
+
+// --------------- ประยุกต์ใช้ async await โดยใช้ Promise all -----------------
+async function runFoo() {
+    const url1 = "https://jsonplaceholder.typicode.com/todos/1";
+    const url2 = "https://jsonplaceholder.typicode.com/todos/2";
+    const url3 = "https://jsonplaceholder.typicode.com/todos/3";
+    
+    try {
+        const res = await Promise.all([url1, url2, url3])
+        for(const item of res) {
+            console.log(item)
+        }
+    } catch (err) {
+        console.log(err);
+    }
+}

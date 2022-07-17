@@ -1,4 +1,4 @@
-//การสร้าง Object แบบ literals
+//การสร้าง Object แบบ literals คือ ออบเจ็คที่เก็บข้อมูลในรูปแบบของ Key/Value หรือที่เรียกว่า Plain object
 var user = {
     name: 'Siwat',
     age: 30,

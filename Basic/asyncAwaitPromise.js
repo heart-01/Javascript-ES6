@@ -3,7 +3,7 @@ const loadData = async () => { //function loadData ทำงานแบบ asyn
     try {
         const url = "https://jsonplaceholder.typicode.com/todos/1";
         const res = await fetch(url); //await ให้รอทำงานจนกว่าจะ fetch เสร็จถึงจะทำงานถัดไป //fetch เป็นมาตราฐานในการร้องขอข้อมูลจาก Server เหมือน Ajax 
-        const data = await res.json(); // แปลงข้อมูลที่ได้เป็น json
+        const data = await res.json(); // แปลงข้อมูล res ที่ได้เป็น json
         
         return data;
         
