@@ -1,0 +1,12 @@
+{
+  "name": "steam_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stream_file_cloning.js",
+  "scripts": {
+    "start": "nodemon stream_file_to_web.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
